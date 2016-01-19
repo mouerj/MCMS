@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property NSMutableArray *creatures;
 
 @end
 
@@ -16,12 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    MagicalCreature *creatureOne = [[MagicalCreature alloc]init];
+    MagicalCreature *creatureTwo = [[MagicalCreature alloc]init];
+    MagicalCreature *creatureThree = [[MagicalCreature alloc]init];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+
 
 @end

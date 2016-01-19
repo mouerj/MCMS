@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MagicalCreature.h"
 
 @interface ViewController : UIViewController
 
