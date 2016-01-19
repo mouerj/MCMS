@@ -25,16 +25,11 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
+    
     if (self.nameTextField.text.length > 0) {
-        NSString *changed = self.nameTextField.text;
-        self.title = changed;
-        
-        ViewController *vc = [[ViewController alloc]init];
-        NSString *old = [[vc.creatures objectAtIndex:self.creatureIndex]name];
-        NSLog([NSString stringWithFormat:@"%li",(long)self.creatureIndex]);
-        NSLog(old);
-        old = changed;
+           self.creature.name = self.nameTextField.text;
         [self.nameTextField resignFirstResponder];
+        self.title = self.creature.name;
         return TRUE;
     }
     [self.nameTextField resignFirstResponder];

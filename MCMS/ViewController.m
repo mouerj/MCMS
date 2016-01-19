@@ -57,7 +57,7 @@
     CreatureViewController *cvc = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     cvc.title = [[self.creatures objectAtIndex:indexPath.row]name];
-    cvc.creatureIndex = indexPath.row;
+    cvc.creature = [self.creatures objectAtIndex:indexPath.row];
 }
 //allow editing to occur
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
