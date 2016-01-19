@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Magical Creature Management System-->
+        <!--Creature Management System-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -21,6 +21,12 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PD3-Il-XYp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Add Creature" textAlignment="center" minimumFontSize="17" id="mav-E2-4G9">
+                                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="nHL-Rb-Fu9">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -29,8 +35,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jer-Sf-eUb" kind="show" id="84o-pV-SvQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="zqT-fd-qBA"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="k7s-hk-9xY"/>
@@ -45,25 +57,111 @@
                             <constraint firstItem="PD3-Il-XYp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="x9H-Ui-Kjn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Magical Creature Management System" id="y5J-E5-u1Y"/>
+                    <navigationItem key="navigationItem" title="Creature Management System" id="y5J-E5-u1Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wx2-ra-Cwo">
+                            <connections>
+                                <action selector="onButtonAdd:" destination="BYZ-38-t0r" id="N1m-3w-JsO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PD3-Il-XYp" id="GEu-hc-IDn"/>
+                        <outlet property="textField" destination="mav-E2-4G9" id="yeq-J2-wUb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="429"/>
         </scene>
+        <!--Creature View Controller-->
+        <scene sceneID="xLU-4g-tI4">
+            <objects>
+                <viewController id="jer-Sf-eUb" customClass="CreatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bpQ-gA-XqW"/>
+                        <viewControllerLayoutGuide type="bottom" id="MS4-9s-PKP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Uu-WG-EwU">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6Y-jL-dgy">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LUB-iX-sTk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LUB-iX-sTk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LUB-iX-sTk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="jer-Sf-eUb" id="w0k-oD-L0i"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G6Y-jL-dgy" firstAttribute="leading" secondItem="9Uu-WG-EwU" secondAttribute="leadingMargin" constant="-20" id="NLy-9i-4J6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G6Y-jL-dgy" secondAttribute="trailing" constant="-20" id="Ov2-a4-L5N"/>
+                            <constraint firstItem="G6Y-jL-dgy" firstAttribute="top" secondItem="bpQ-gA-XqW" secondAttribute="bottom" id="Wkd-Bl-HmF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="G6Y-jL-dgy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NLy-9i-4J6"/>
+                                <exclude reference="Ov2-a4-L5N"/>
+                                <exclude reference="Wkd-Bl-HmF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="G6Y-jL-dgy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NLy-9i-4J6"/>
+                                <include reference="Ov2-a4-L5N"/>
+                                <include reference="Wkd-Bl-HmF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Edit" width="385" style="plain" id="MRr-e4-TPQ">
+                            <connections>
+                                <action selector="onEditTapped:" destination="jer-Sf-eUb" id="mij-dt-m4r"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="G6Y-jL-dgy" id="YcF-wo-qeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg0-qj-ce9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819.5" y="429"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XC2-EF-cuq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yAc-yx-gLf" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="yAc-yx-gLf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="455-J4-ejt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ka6-e2-XeN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bUu-6q-wQc"/>
                     </connections>

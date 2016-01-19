@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B0BC3671C4ED1DA00858238 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BC3661C4ED1DA00858238 /* MagicalCreature.m */; };
+		7B0BC36A1C4EDDCE00858238 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BC3691C4EDDCE00858238 /* CreatureViewController.m */; };
 		DF5F46D41C4ECFC800AAC6B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F46D31C4ECFC800AAC6B8 /* main.m */; };
 		DF5F46D71C4ECFC800AAC6B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F46D61C4ECFC800AAC6B8 /* AppDelegate.m */; };
 		DF5F46DA1C4ECFC800AAC6B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5F46D91C4ECFC800AAC6B8 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		7B0BC3651C4ED1DA00858238 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
 		7B0BC3661C4ED1DA00858238 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
+		7B0BC3681C4EDDCE00858238 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		7B0BC3691C4EDDCE00858238 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 		DF5F46CF1C4ECFC800AAC6B8 /* MCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F46D31C4ECFC800AAC6B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF5F46D51C4ECFC800AAC6B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				DF5F46D61C4ECFC800AAC6B8 /* AppDelegate.m */,
 				DF5F46D81C4ECFC800AAC6B8 /* ViewController.h */,
 				DF5F46D91C4ECFC800AAC6B8 /* ViewController.m */,
+				7B0BC3681C4EDDCE00858238 /* CreatureViewController.h */,
+				7B0BC3691C4EDDCE00858238 /* CreatureViewController.m */,
 				7B0BC3651C4ED1DA00858238 /* MagicalCreature.h */,
 				7B0BC3661C4ED1DA00858238 /* MagicalCreature.m */,
 				DF5F46DB1C4ECFC800AAC6B8 /* Main.storyboard */,
@@ -157,6 +162,7 @@
 				DF5F46DA1C4ECFC800AAC6B8 /* ViewController.m in Sources */,
 				7B0BC3671C4ED1DA00858238 /* MagicalCreature.m in Sources */,
 				DF5F46D71C4ECFC800AAC6B8 /* AppDelegate.m in Sources */,
+				7B0BC36A1C4EDDCE00858238 /* CreatureViewController.m in Sources */,
 				DF5F46D41C4ECFC800AAC6B8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

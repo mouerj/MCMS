@@ -10,6 +10,7 @@
 #import "MagicalCreature.h"
 
 @interface ViewController : UIViewController
+@property NSMutableArray *creatures;
 
 
 @end
