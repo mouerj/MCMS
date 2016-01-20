@@ -46,7 +46,8 @@
 - (IBAction)onButtonAdd:(UIBarButtonItem *)sender {
     if (self.textField.text.length > 0) {
         NSString *newCreature = self.textField.text;
-        MagicalCreature *creature = [[MagicalCreature alloc]initWithName:newCreature andImageNamed:@"creature1"];
+        NSString *randomName = [NSString stringWithFormat:@"creature%u.png", 1+arc4random_uniform(3)];
+        MagicalCreature *creature = [[MagicalCreature alloc]initWithName:newCreature andImageNamed:randomName];
         [self.creatures addObject:creature];
         [self.tableView reloadData];
         [self.tableView resignFirstResponder];
