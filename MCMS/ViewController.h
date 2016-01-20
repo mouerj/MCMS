@@ -11,6 +11,8 @@
 
 @interface ViewController : UIViewController
 @property NSMutableArray *creatures;
+@property NSMutableArray *swag;
+@property NSString *swagItems;
 
 @end
 

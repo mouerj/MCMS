@@ -29,12 +29,32 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="nHL-Rb-Fu9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" textLabel="Cfa-2P-9ji" detailTextLabel="kqY-YN-R0q" style="IBUITableViewCellStyleSubtitle" id="nHL-Rb-Fu9">
                                         <rect key="frame" x="0.0" y="122" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nHL-Rb-Fu9" id="Ebo-4a-5w3">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cfa-2P-9ji">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqY-YN-R0q">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="jer-Sf-eUb" kind="show" id="84o-pV-SvQ"/>
@@ -123,6 +143,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s7Y-Kw-VxU">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="152" y="351" width="97" height="30"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="jer-Sf-eUb" id="uvo-go-a32"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,6 +167,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="G6Y-jL-dgy"/>
+                                <exclude reference="s7Y-Kw-VxU"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="NLy-9i-4J6"/>
@@ -149,6 +181,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="G6Y-jL-dgy"/>
+                                <include reference="s7Y-Kw-VxU"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="NLy-9i-4J6"/>
@@ -171,6 +204,7 @@
                     <connections>
                         <outlet property="creatureView" destination="5AW-OV-5Gd" id="Pva-iq-sY4"/>
                         <outlet property="nameTextField" destination="G6Y-jL-dgy" id="YcF-wo-qeR"/>
+                        <outlet property="swagTextField" destination="s7Y-Kw-VxU" id="5nA-lk-ya7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg0-qj-ce9" userLabel="First Responder" sceneMemberID="firstResponder"/>

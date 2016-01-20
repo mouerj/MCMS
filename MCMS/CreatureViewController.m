@@ -13,6 +13,7 @@
 @interface CreatureViewController () <UITextFieldDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *creatureView;
+@property (weak, nonatomic) IBOutlet UITextField *swagTextField;
 
 
 @end
@@ -23,11 +24,11 @@
     [super viewDidLoad];
     [self.nameTextField setHidden:YES];
     [self.creatureView setImage:self.creature.image];
+
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    
+  
     if (self.nameTextField.text.length > 0) {
            self.creature.name = self.nameTextField.text;
         [self.nameTextField resignFirstResponder];

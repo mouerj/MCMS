@@ -11,11 +11,12 @@
 
 @implementation MagicalCreature
 
--(instancetype)initWithName:(NSString *)name andImageNamed:(NSString *)imageName {
+-(instancetype)initWithName:(NSString *)name andImageNamed:(NSString *)imageName andSwag:(NSString *)swag {
     self = [super init];
     if (self) {
         self.name = name;
         self.image = [UIImage imageNamed:imageName];
+        self.swag = swag;
     }
     return self;
 }
