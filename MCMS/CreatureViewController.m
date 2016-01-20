@@ -12,6 +12,7 @@
 
 @interface CreatureViewController () <UITextFieldDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *creatureView;
 
 
 @end
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.nameTextField setHidden:YES];
+    [self.creatureView setImage:self.creature.image];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {

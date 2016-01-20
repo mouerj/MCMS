@@ -21,9 +21,9 @@
 //instantiated mutable array "creatures" with objects of MagicalCreature type
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Pokemon"];
-    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Deathclaw"];
-    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Paarthumax"];
+    MagicalCreature *creatureOne = [[MagicalCreature alloc] initWithName:@"Pokemon" andImageNamed:@"creature1.png"];
+    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Deathclaw" andImageNamed:@"creature2.png"];
+    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Parrthumax" andImageNamed:@"creature3.png"];
     self.creatures = [NSMutableArray arrayWithObjects:creatureOne,creatureTwo, creatureThree, nil];
 }
 -(void)viewWillAppear:(BOOL)animated {
@@ -46,7 +46,7 @@
 - (IBAction)onButtonAdd:(UIBarButtonItem *)sender {
     if (self.textField.text.length > 0) {
         NSString *newCreature = self.textField.text;
-        MagicalCreature *creature = [[MagicalCreature alloc]initWithName:newCreature];
+        MagicalCreature *creature = [[MagicalCreature alloc]initWithName:newCreature andImageNamed:@"creature1"];
         [self.creatures addObject:creature];
         [self.tableView reloadData];
         [self.tableView resignFirstResponder];

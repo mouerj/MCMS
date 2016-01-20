@@ -7,13 +7,15 @@
 //
 
 #import "MagicalCreature.h"
+#import <UIKit/UIKit.h>
 
 @implementation MagicalCreature
 
--(instancetype)initWithName:(NSString *)name {
+-(instancetype)initWithName:(NSString *)name andImageNamed:(NSString *)imageName {
     self = [super init];
     if (self) {
         self.name = name;
+        self.image = [UIImage imageNamed:imageName];
     }
     return self;
 }
